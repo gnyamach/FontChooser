@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FontChooser</string>
+    <string name="style_prompt">Choose Font Style</string>
+    <string-array name="styles_array">
+        <item>DEFAULT</item>
+        <item>DEFAULT_BOLD</item>
+        <item>MONOSPACE</item>
+        <item>SANS_SERIF</item>
+        <item>SERIF</item>
+        <item>BOLD</item>
+        <item>BOLD_ITALIC</item>
+        <item>ITALIC</item>
+        <item>NORMAL</item>
+    </string-array>
+</resources>

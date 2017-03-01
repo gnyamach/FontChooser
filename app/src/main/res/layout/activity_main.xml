@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcfbfd"
+    tools:context="com.vogella.android.fontchooser.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="gravity"
+        android:textSize="15sp"
+        android:padding="2dp"
+        android:text="I Love Android Programming !"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="1dp"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Choose Font Style:"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:background="#999bf2"
+            android:padding="8dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="21dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_weight="1"
+            android:id="@+id/spinnerStyle"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="1dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:ems="10"
+            android:background="#c3dbe2"
+            android:id="@+id/et_fontsize"
+            android:hint="Type Font Size" />
+
+        <Button
+            android:text="Set Font Size"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/button_displayFont"
+            android:onClick="setFontSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:background="#deebf7">
+
+        <TextView
+            android:text="Slide Bar To Change Font Color"
+            android:textAlignment="center"
+            android:textColor="#f20515"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_changeFontColor"
+            android:layout_weight="1" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#999bf2"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/seekBarFont"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="view progress"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginEnd="120dp"
+            android:id="@+id/tv_seekbarProgress"
+            android:paddingTop="2dp"
+            android:layout_weight="1"
+            android:layout_gravity="right"
+            android:layout_centerHorizontal="true" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#999bf2"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/seekBarFont_R"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="view progress"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginEnd="120dp"
+            android:id="@+id/tv_seekbarProgress_R"
+            android:paddingTop="0dp"
+            android:layout_gravity="right"
+            android:layout_weight="1"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#999bf2"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/seekBarFont_G"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="view progress"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginEnd="120dp"
+            android:id="@+id/tv_seekbarProgress_G"
+            android:paddingTop="2dp"
+            android:layout_gravity="right"
+            android:layout_weight="1" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#999bf2"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/seekBarFont_B"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="view progress"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_marginEnd="120dp"
+            android:id="@+id/tv_seekbarProgress_B"
+            android:paddingTop="0dp"
+            android:layout_gravity="right"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@mipmap/plus_outline" />
+
+    </RelativeLayout>
+</LinearLayout>
