@@ -194,12 +194,12 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/fab_display"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            app:fabSize="mini"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:clickable="true"
+            app:fabSize="mini"
             app:srcCompat="@mipmap/plus_outline" />
 
     </RelativeLayout>

@@ -65,14 +65,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void handleIntent(Intent intent) {
         String action = intent.getAction();
-        Bundle info = intent.getExtras();
         if (action.equals("msud.cs3013.ACTION_RETRIEVE_FONT")){
             Log.i(TAG, "Handling the action");
         }else {
             Log.i(TAG, "Missing or Unrecognized Action");
-        }
-        if(info != null){
-
         }
     }
 
@@ -217,16 +213,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             intent.putExtra("Typeface","SERIF");
         }else  if (setType.equals("BOLD")){
             textView.setTypeface(null, Typeface.BOLD);
-            intent.putExtra("Style","BOLD");
+            intent.putExtra("Typeface","BOLD");
         }else  if (setType.equals("BOLD_ITALIC")){
             textView.setTypeface(null, Typeface.BOLD_ITALIC);
-            intent.putExtra("Style","DEFAULT_BOLD");
+            intent.putExtra("Typeface","DEFAULT_BOLD");
         }else  if (setType.equals("ITALIC")){
             textView.setTypeface(null,Typeface.ITALIC);
-            intent.putExtra("Style","ITALIC");
-        }else{
+            intent.putExtra("Typeface","ITALIC");
+        }else if (setType.equals("NORMAL")){
             textView.setTypeface(null,Typeface.NORMAL);
-            intent.putExtra("Style","DEFAULT_BOLD");
+            intent.putExtra("Typeface","NORMAL");
+        }else{
+            intent.putExtra("Typeface","NONE");
         }
 
     }
@@ -237,16 +235,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void setFontSize(View view) {
-        if (fontSize != null){
+        if (fontSize.getText().toString().matches("")){
+            Log.i(TAG, "no valid font value entered");
+            intent.putExtra("FontSize", 2012);
+            Toast.makeText(this, "Enter an integer value please", Toast.LENGTH_LONG).show();
+        }else{
             int font = Integer.valueOf(fontSize.getText().toString());
             textView.setTextSize(Integer.valueOf(fontSize.getText().toString()));
             intent.putExtra("FontSize", font);
-        }else{
-            Log.i(TAG, "no valid font value entered");
-            Toast.makeText(this, "Enter an integer value please", Toast.LENGTH_LONG).show();
         }
-
     }
-
-
 }
